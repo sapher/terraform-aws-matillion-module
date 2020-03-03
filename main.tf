@@ -44,7 +44,7 @@ resource "aws_security_group" "this_instance" {
     from_port       = 80
     protocol        = "tcp"
     to_port         = 80
-    security_groups = merge(var.matillion_sg_ids, [aws_security_group.this_alb.id])
+    security_groups = concat(var.matillion_sg_ids, [aws_security_group.this_alb.id])
   }
 
   ingress {
@@ -52,7 +52,7 @@ resource "aws_security_group" "this_instance" {
     from_port       = 443
     protocol        = "tcp"
     to_port         = 443
-    security_groups = merge(var.matillion_sg_ids, [aws_security_group.this_alb.id])
+    security_groups = concat(var.matillion_sg_ids, [aws_security_group.this_alb.id])
   }
 
   egress {

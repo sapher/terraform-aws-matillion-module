@@ -2,6 +2,8 @@
 
 For this module to work, you need to subscribe to [Matillion for Snowflake](https://aws.amazon.com/marketplace/pp/B073GRSSZD?ref_=aws-mp-console-subscription-detail) on AWS Marketplace.
 
+This module will launch an AWS instance running `Matillion for Snowflake` behind an ALB.
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -19,5 +21,5 @@ For this module to work, you need to subscribe to [Matillion for Snowflake](http
 
 | Name | Description |
 | ---- | ----------- |
-| matillion_instance_id | Matillion instance id (used as default password for user `ec2-user` |
+| matillion_instance_id | Matillion instance id (used as default password for user `ec2-user`) |
 | matillion_lb_dns_name | Matillion load balancer DNS name |
